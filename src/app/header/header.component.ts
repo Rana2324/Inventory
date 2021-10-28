@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public search=true;
+
   constructor() { }
 
   ngOnInit(): void {
+    if(window.innerWidth<=992){
+      this.search=false;
+    }
+    
+
+    
   }
+  
 
 }

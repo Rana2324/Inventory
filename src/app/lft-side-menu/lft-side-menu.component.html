@@ -1,0 +1,70 @@
+<div class="card">
+    <div class="card-header">
+        <div class="" style="font-size: 1.25rem;">
+            Inventory
+        </div>
+
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a class="card-link" routerLink="/"><i class="fas fa-tachometer-alt mr-2"></i>
+                    Dashboard</a></li>
+            <li class="list-group-item " (click)="item()"><a class="card-link"><i
+                        class="fas fa-shopping-basket mr-2"></i>Items</a>
+                        <i class="fas fa-sort-down float-right" *ngIf="this.items===true"></i>
+                        <i class="fas fa-caret-right float-right" *ngIf="this.items===false"></i>
+                    </li>
+
+            <ul class="list-group list-group-flush" *ngIf="this.items">
+                <li class="list-group-item"><a>Item Group</a><a class="card-link float-right hideShow"><i
+                            class="fas fa-plus"></i></a></li>
+                <li class="list-group-item"><a>Items</a><a class="card-link float-right hideShow"><i class="fas fa-plus"></i></a>
+                </li>
+                <li class="list-group-item"><a>Inventory Adjustments</a><a class="card-link float-right hideShow"><i
+                            class="fas fa-plus"></i></a></li>
+            </ul>
+
+            <li class="list-group-item"><a class="card-link" routerLink="/customer"><i class="far fa-user mr-2"></i>Customers</a>
+                <a class="card-link float-right hideShow" routerLink="/customerCreate"><i class="fas fa-plus" ></i></a></li>
+
+            <li class="list-group-item"><a class="card-link" routerLink="/package"><i class="fas fa-file-invoice mr-2"></i>Retainer Invoices</a><a
+                    class="card-link float-right hideShow"><i class="fas fa-plus"></i></a></li>
+            <li class="list-group-item"><a class="card-link"><i class="fas fa-shopping-cart mr-2"></i>Sells Orders</a><a class="card-link float-right hideShow"><i
+                        class="fas fa-plus"></i></a></li>
+            <li class="list-group-item"><a class="card-link"><i class="fas fa-cube mr-2"></i>Packages</a><a class="card-link float-right hideShow"><i
+                        class="fas fa-plus"></i></a></li>
+            <li class="list-group-item"><a class="card-link"><i class="fas fa-calendar-minus mr-2"></i>Invoices</a><a class="card-link float-right hideShow"><i
+                        class="fas fa-plus"></i></a></li>
+            <li class="list-group-item"><a class="card-link" routerLink="/"><i class="fas fa-money-check-alt mr-2"></i>Payments Received</a><a
+                    class="card-link float-right hideShow"><i class="fas fa-plus"></i></a></li>
+
+            <li class="list-group-item" (click)="return()"><a class="card-link" routerLink="/customer"><i class="fas fa-undo-alt mr-2"></i>Returns</a>
+
+                <i class="fas fa-sort-down float-right" *ngIf="this.returns===true"></i>
+                <i class="fas fa-caret-right float-right" *ngIf="this.returns===false"></i>
+            
+            </li>
+
+            <ul class="list-group list-group-flush" *ngIf="this.returns">
+                <li class="list-group-item"><a>Seles Returns</a></li>
+                <li class="list-group-item"><a>Credit Notes</a><a class="card-link float-right hideShow"><i
+                            class="fas fa-plus"></i></a></li>
+
+            </ul>
+
+            <li class="list-group-item"><a class="card-link" routerLink="/package"><i class="fas fa-store mr-2"></i>Vendors</a><a
+                    class="card-link float-right hideShow"><i class="fas fa-plus"></i></a></li>
+            <li class="list-group-item"><a class="card-link"><i class="fas fa-file-invoice-dollar mr-2"></i>Purchase Orders</a><a class="card-link float-right hideShow"><i
+                        class="fas fa-plus"></i></a></li>
+            <li class="list-group-item"><a class="card-link"><i class="fas fa-dollar-sign mr-2"></i>Bills</a></li>
+            <li class="list-group-item"><a class="card-link"><i class="fas fa-money-bill-wave mr-2"></i>Payments Made</a><a class="card-link float-right hideShow"><i
+                        class="fas fa-plus"></i></a></li>
+            <li class="list-group-item"><a class="card-link"><i class="fab fa-creative-commons-nc mr-2"></i>Vendor Credits</a><a class="card-link float-right hideShow"><i
+                        class="fas fa-plus"></i></a></li>
+            <li class="list-group-item"><a class="card-link"><i class="fas fa-plug mr-2"></i>Integrations</a></li>
+            <li class="list-group-item"><a class="card-link"><i class="fas fa-share-alt mr-2"></i>Reports</a></li>
+
+        </ul>
+
+    </div>
+</div>

@@ -1,1 +1,13 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
+<div class="row no-gutters">
+    <div class="col-2 bg-primary " style="min-height: 100vh;">
+        <app-lft-side-menu></app-lft-side-menu>
+    </div>
+    <div class="col bg-secondary">
+        <app-header></app-header>
+        <div style="min-height: 100vh;" >
+            <router-outlet></router-outlet>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>

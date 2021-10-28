@@ -1,0 +1,16 @@
+.hideShow{
+    display: none;
+}
+li:hover .hideShow{
+    display: block;
+
+
+}
+li:hover{
+    background-color: green;
+    
+
+}
+li:hover a{
+    color: white;
+}

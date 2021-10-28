@@ -1,0 +1,289 @@
+<div class="card">
+    <div class="card-header">
+        <h2>New Customer</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-3">
+                <label class="form-label" for="CustomerType">Customer Type</label>
+            </div>
+            <div class="col">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="inlineradio1" value="option1" checked>
+                    <label class="form-check-label" for="inlineradio1">Business</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="inlineradio2" value="option2">
+                    <label class="form-check-label" for="inlineradio2">Individual</label>
+                </div>
+
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="PrimaryContact">Primary Contact</label>
+            <select class="form-control" id="PrimaryContact">
+                <option selected>salutation</option>
+                <option value="1">Mr</option>
+                <option value="2">Mss</option>
+                <option value="3">Dr</option>
+            </select>
+        </div>
+        <div class="">
+            <input type="text" class="form-control" placeholder="First Name">
+        </div>
+        <div class="mt-3">
+            <input type="text" class="form-control" placeholder="Last Name">
+        </div>
+        <label class="form-label" for="CompanyName">Company Name</label>
+        <div class="input-group mb-3">
+
+            <input type="text" class="form-control" placeholder="">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="CustomerDisplayName">Customer Display Name*</label>
+            <select class="form-control" id="CustomerDisplayName">
+
+                <option value="3"></option>
+            </select>
+        </div>
+        <div class=" mb-3">
+            <label class="form-label" for="CustomerEmail">Customer Email</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class=" mb-3">
+            <label class="form-label" for="CustomerPhone">Customer Phone</label>
+            <input type="text" class="form-control" placeholder="Work phone">
+            <input type="text" class="form-control" placeholder="Mobile">
+        </div>
+
+
+
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <button class="btn btn-success mx-1" (click)="otherDetails()">Other Details</button>
+        <button class="btn btn-success mx-1" (click)="address()">Address</button>
+        <button class="btn btn-success mx-1" (click)="contactPersons()">Contact Persons</button>
+        <button class="btn btn-success mx-1" (click)="contactPersons()">Custom Persons</button>
+        <button class="btn btn-success mx-1" (click)="customFields()">Custom Fields</button>
+        <button class="btn btn-success mx-1" (click)="reportingTags()">Reporting Tags</button>
+        <button class="btn btn-success mx-1" (click)="remarks()">Remarks</button>
+    </div>
+    <div class="card-body">
+        <form *ngIf="this.otherDetail===true">
+
+
+            <div class="mb-3">
+                <label class="form-label" for="Currency">Currency*</label>
+                <select class="form-control" id="Currency">
+
+                    <option selected>Singapore Dollar</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="PaymentTerms">Payment Terms</label>
+                <select class="form-control" id="PaymentTerms">
+                    <option selected>Net 60</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="PriceList">Price List</label>
+                <select class="form-control" id="PriceList">
+                    <option selected>100Taka</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+
+            <label class="form-label" for="facebook">Facebook</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="facebook"><i class="fab fa-facebook-square"></i></span>
+                <input type="text" class="form-control" placeholder="Username">
+            </div>
+            <label class="form-label" for="twitter">Twitter</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="twitter"><i class="fab fa-twitter-square"></i></span>
+                <input type="text" class="form-control" placeholder="Username">
+            </div>
+            <div class="">
+                <b>Customer Owner:</b> Assign a user as the Customer owner to provide access only to the data of this
+                customer.<a href=""> Learn More </a>
+            </div>
+        </form>
+        <form *ngIf="this.addressCustomer===true">
+            <div class="card">
+                <div class="card-header">
+                    <h3>BILLING ADDRESS</h3>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label" for="Country">Country</label>
+                        <select class="form-control" id="Country">
+                            <option selected>Select or type to add</option>
+                            <option value="1">Bangladesh</option>
+                            <option value="2">Japan</option>
+                            <option value="3">India</option>
+                        </select>
+                    </div>
+                    <label for="floatingTextarea">Address</label>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Street1" id="floatingTextarea"></textarea>
+
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Street2" id="floatingTextarea"></textarea>
+
+                    </div>
+                    <div class=" mb-3">
+                        <label class="form-label" for="City">City</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class=" mb-3">
+                        <label class="form-label" for="State">State</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class=" mb-3">
+                        <label class="form-label" for="Zip Code">Zip Code</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class=" mb-3">
+                        <label class="form-label" for="Phone">Phone</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class=" mb-3">
+                        <label class="form-label" for="Fax">Fax</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <p>SHIPPING ADDRESS</p>
+                   <div class="float-right">
+                        <i class="fas fa-long-arrow-alt-down"></i>
+                       <a href="">Copy billing address</a>
+                   </div>
+                   <div class="mb-3">
+                    <label class="form-label" for="Country">Country</label>
+                    <select class="form-control" id="Country">
+                        <option selected>Select or type to add</option>
+                        <option value="1">Bangladesh</option>
+                        <option value="2">Japan</option>
+                        <option value="3">India</option>
+                    </select>
+                </div>
+                <label for="floatingTextarea">Address</label>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Street1" id="floatingTextarea"></textarea>
+
+                </div>
+
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Street2" id="floatingTextarea"></textarea>
+
+                </div>
+                <div class=" mb-3">
+                    <label class="form-label" for="City">City</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class=" mb-3">
+                    <label class="form-label" for="State">State</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class=" mb-3">
+                    <label class="form-label" for="Zip Code">Zip Code</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class=" mb-3">
+                    <label class="form-label" for="Phone">Phone</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class=" mb-3">
+                    <label class="form-label" for="Fax">Fax</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                </div>
+            </div>
+        </form>
+        <form *ngIf="this.contactPerson===true">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Salutation</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email Address</th>
+                        <th>Work Phone</th>
+                        <th>Mobile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                        <td class="p-0">
+                            <select class="form-control">
+                                <option selected></option>
+                                <option value="1">Mss</option>
+                                <option value="2">Mis</option>
+                                <option value="3">Dr</option>
+                            </select>
+                        </td>
+                        <td class="p-0">
+                            <input type="text" class="form-control">
+                        </td>
+                        <td class="p-0">
+                            <input type="text" class="form-control">
+                        </td>
+                        <td class="p-0">
+                            <input type="text" class="form-control">
+                        </td>
+                        <td class="p-0">
+                            <input type="text" class="form-control">
+                        </td>
+                        <td class="p-0">
+                            <input type="text" class="form-control">
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <form *ngIf="this.customerPerson===true">
+            CustomPerson
+        </form>
+        <form *ngIf="this.customField===true">
+            <p>Start adding custom fields for your contacts by going to Settings <span><i
+                        class="fas fa-long-arrow-alt-right"></i></span> Preferences <span><i
+                        class="fas fa-long-arrow-alt-right"></i></span> Customers and Vendors. You can add as many as
+                Ten extra fields, as well as refine the address format of your customers from there.</p>
+        </form>
+
+
+        <form *ngIf="this.reportingTag===true">
+            <div class="text-center">
+                <p class="mb-0">You've not created any Reporting Tags.</p>
+            </div>
+            <div class="text-center">
+                <p class="mb-0"> Start creating reporting tags by going to More Settings </p>
+            </div>
+        </form>
+
+        <form *ngIf=" this.remark===true">
+            <label for="floatingTextarea">Remark(For internal Use)</label>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+
+            </div>
+        </form>
+    </div>
+    <div class="card-footer">
+        <button type="button" class="btn btn-primary mr-3">Save</button>
+        <button type="button" class="btn btn-secondary">Cancel</button>
+    </div>
+</div>
